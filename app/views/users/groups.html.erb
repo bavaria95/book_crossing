@@ -1,0 +1,8 @@
+There should be list of all users available to trade
+<br>
+
+<ul class="collection">
+<% @close_users.each do |user| %>
+	<li class="collection-item"><%= user.email %></li>
+<% end %>
+</ul>

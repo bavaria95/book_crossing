@@ -1,0 +1,8 @@
+There should be list of all users books and he would be able to add new ones(I hope so).
+<br>
+
+<ul class="collection">
+<% @books.each do |book| %>
+	<li class="collection-item"><%= book.title %></li>
+<% end %>
+</ul>

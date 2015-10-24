@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
   resources :books
   devise_for :users
+  root "home#index"
+  
+  get "home/index"
+  
   get 'users/profile', as: 'user_root'
   get 'users/profile'
 
-  get "home/index"
-  root "home#index"
+  get 'users/books' 
+  get 'users/groups'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
