@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :books
   devise_for :users
   get 'users/profile', as: 'user_root'
   get 'users/profile'
