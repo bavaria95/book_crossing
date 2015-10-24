@@ -4,12 +4,14 @@ Rails.application.routes.draw do
   root "home#index"
   
   get "home/index"
-    
+  
   get 'users/profile', as: 'user_root'
   get 'users/profile'
 
   get 'users/books' 
   get 'users/groups'
+
+  get 'transactions/index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

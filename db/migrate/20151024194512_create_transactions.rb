@@ -1,6 +1,6 @@
-class CreateRequests < ActiveRecord::Migration
+class CreateTransactions < ActiveRecord::Migration
   def change
-    create_table :requests do |t|
+    create_table :transactions do |t|
       t.integer :requester # person who initiate transaction
       t.integer :requested_book # book which is wanted by requester
       t.integer :requested # person who has desired book

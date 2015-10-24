@@ -1,4 +1,3 @@
-class Request < ActiveRecord::Base
+class Transaction < ActiveRecord::Base
 	validates :requester, :requested_book, :requested, presence: true
-
 end
