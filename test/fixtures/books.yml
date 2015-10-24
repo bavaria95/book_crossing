@@ -2,7 +2,6 @@
 
 one:
   title: MyString
-<<<<<<< HEAD
   description: MyText
   author: MyString
 
@@ -10,10 +9,8 @@ two:
   title: MyString
   description: MyText
   author: MyString
-=======
   descriprion: MyText
 
 two:
   title: MyString
   descriprion: MyText
->>>>>>> origin
