@@ -3,10 +3,10 @@ class UsersController < ApplicationController
   end
 
   def books
-  	@books = Book.where(user_id: current_user.id)
+  	@books = Book.where(:user_id => current_user.id)
   end
   
   def groups
-  	@close_users = User.where(city: current_user.city)
+  	@close_users = User.where(:city => current_user.city).where.not(:id => current_user.id)
   end
 end

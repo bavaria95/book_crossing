@@ -1,6 +1,12 @@
 class HomeController < ApplicationController
 	before_action :authenticate_user!
 	def index
-		@shelf = Book.where.not(:user_id => current_user.id)
+		city = current_user.city
+		users_in_city = User.where(:city => current_user.city).where.not(:id => current_user.id)
+		@shelf = []
+		users_in_city.each do |u|
+			@shelf += Book.where(:user_id => u.id)
+		end
+
 	end
 end
