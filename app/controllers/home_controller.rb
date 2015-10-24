@@ -7,6 +7,5 @@ class HomeController < ApplicationController
 		users_in_city.each do |u|
 			@shelf += Book.where(:user_id => u.id)
 		end
-
 	end
 end
