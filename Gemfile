@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'city-state'
-gem 'material_design_lite-rails'
+#gem 'material_design_lite-rails'
 gem 'therubyracer'
 
 
