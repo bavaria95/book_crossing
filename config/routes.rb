@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root "home#index"
   
   get "home/index"
-  
+    
   get 'users/profile', as: 'user_root'
   get 'users/profile'
 
