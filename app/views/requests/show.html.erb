@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Requester:</strong>
+  <%= @request.requester %>
+</p>
+
+<p>
+  <strong>Requested book:</strong>
+  <%= @request.requested_book %>
+</p>
+
+<p>
+  <strong>Requested:</strong>
+  <%= @request.requested %>
+</p>
+
+<p>
+  <strong>Requester book:</strong>
+  <%= @request.requester_book %>
+</p>
+
+<p>
+  <strong>Accepted:</strong>
+  <%= @request.accepted %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>

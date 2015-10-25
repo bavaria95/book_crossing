@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  requester: 1
+  requested_book: 1
+  requested: 1
+  requester_book: 1
+  accepted: MyString
+
+two:
+  requester: 1
+  requested_book: 1
+  requested: 1
+  requester_book: 1
+  accepted: MyString
