@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 <h1>Listing Requests to Me</h1>
 
+<script type="text/javascript">
+  var a = 5;
+
+</script>
+
 <table>
   <thead>
     <tr>
@@ -22,16 +27,19 @@
         <%@r_books_titles = []%>
         <% @r_books.each  { |book| @r_books_titles<<[book.title,book.id]}%>
         
-        <%= select_tag(:requester_book_name, options_for_select(@r_books_titles), :id =>"st1")  %>
+        <% if request.accepted == "waiting" %>
+          <%= form_for(request) do |f| %>
+          <%= select_tag(:requester_book, options_for_select(@r_books_titles))  %>
+          <div class="actions">
+            <%= f.submit "Accept" %>
+          </div>
+          <% end %>
+        <% end %>
 
         </td>
         <td><%= request.accepted %></td>
 
-        <input type="button" onclick="alert(document.getElementById('st1').value)" value="test" />
 
-
-        <td><%= link_to 'Accept', request, {
-          "test": "testtest"} if request.accepted == "waiting" %></td>
         <td><%= link_to 'Reject', edit_request_path(request) if request.accepted == "waiting" %></td>
       </tr>
     <% end %>
