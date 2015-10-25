@@ -27,15 +27,6 @@
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
-
-    
-    <div>
-    <%fx = File.readlines(Rails.root + 'public/cities.dat') %>
-    <%@cities = []%>
-    <%fx.each { |e| @cities<<e.strip  } %>
-    <%= f.select :city, @cities%>
-  </div>
-
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

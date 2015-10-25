@@ -1572,10 +1572,7 @@
 		text-decoration: none;
 	}
 
-		a:hover {
-			border-bottom-color: transparent;
-			color: #4acaa8 !important;
-		}
+
 
 	strong, b {
 		color: #777;
@@ -2383,9 +2380,9 @@
 			color: #ffffff !important;
 		}
 
-			input[type="submit"].special:hover,
-			input[type="reset"].special:hover,
-			input[type="button"].special:hover,
+			input[type="submit"].special,
+			input[type="reset"].special,
+			input[type="button"].special,
 			.button.special:hover {
 				background-color: #5ed0b1;
 			}
