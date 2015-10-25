@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :requests
+
   resources :books
   devise_for :users
   root "home#index"
@@ -11,8 +12,6 @@ Rails.application.routes.draw do
 
   get 'users/books' 
   get 'users/groups'
-
-  resources :transactions
 
 
   # The priority is based upon order of creation: first created -> highest priority.
