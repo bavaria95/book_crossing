@@ -5,22 +5,21 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="materialize.min.css">
-
   <!-- Compiled and minified JavaScript -->
   <script src="materialize.min.js"></script>
-  <%= stylesheet_link_tag "icons" %>
-  
+  <%= stylesheet_link_tag "icons" %>  
 </head>
 <body>
 
 <div>
+    <span class = "btn"><%=link_to  "Home", root_path%></span>
 <% if user_signed_in? %>
-    <span>Hello, <%= current_user.email %></span>
-    <%= link_to 'Log out', destroy_user_session_path, :method => :delete %>
-    <%= link_to 'Edit account', edit_user_registration_path %>
+    <span>Hello, <%= current_user.name %></span>
+     <span class = "btn"><%= link_to 'My Books', users_books_path%></span>
+    <span class = "btn" ><%= link_to 'Edit account', edit_user_registration_path %></span>
+     <span class = "btn"><%= link_to 'Log out', destroy_user_session_path, :method => :delete %> </span>
 <% else %>
     
     
