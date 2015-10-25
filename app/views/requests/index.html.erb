@@ -18,9 +18,21 @@
       <tr>
         <td><%= User.find(request.requester).name %></td>
         <td><b><%= Book.find(request.requested_book).title %></b>, <%= Book.find(request.requested_book).author %> </td>
-        <td><%= Book.find(request.requester_book).title if request.requester_book %></td>
+        <td>
+        <%@r_books = Book.where(user_id: request.requester) %>
+        <%@r_books_titles = []%>
+        <% @r_books.each  { |book| @r_books_titles<<[book.title,book.id]}%>
+        
+        <%= select_tag(:requester_book_name, options_for_select(@r_books_titles), :id =>"st1")  %>
+
+        </td>
         <td><%= request.accepted %></td>
-        <td><%= link_to 'Accept', request if request.accepted == "waiting" %></td>
+
+        <input type="button" onclick="alert(document.getElementById('st1').value)" value="test" />
+
+
+        <td><%= link_to 'Accept', request, {
+          "test": "testtest"} if request.accepted == "waiting" %></td>
         <td><%= link_to 'Reject', edit_request_path(request) if request.accepted == "waiting" %></td>
       </tr>
     <% end %>

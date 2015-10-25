@@ -42,6 +42,8 @@ class RequestsController < ApplicationController
   def show
     # @request = Request.find_by(params[:id])
     @request.accepted = "accepted"
+    @request.requester_book = Book.where(title: params[:requester_book_name])[0].id
+
     @request.save
 
     redirect_to requests_path
@@ -71,6 +73,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      params.require(:request).permit(:requester, :requested_book, :requested, :requester_book, :accepted)
+      params.require(:request).permit(:requester, :requested_book, :requested, :requester_book, :accepted, :requester_book_name, :test)
     end
 end
