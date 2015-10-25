@@ -1,8 +1,8 @@
 class RequestsController < ApplicationController
   before_action :set_request, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-
-  # GET /requests
+  
+  # GET /requestys
   # GET /requests.json
   def index
     own_id = current_user.id
