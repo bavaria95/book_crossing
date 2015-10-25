@@ -18,6 +18,7 @@
 <% if user_signed_in? %>
     <span>Hello, <%= current_user.name %></span>
      <span class = "btn"><%= link_to 'My Books', users_books_path%></span>
+     <span class = "btn"><%= link_to 'Trades', requests_path%></span>
     <span class = "btn" ><%= link_to 'Edit account', edit_user_registration_path %></span>
      <span class = "btn"><%= link_to 'Log out', destroy_user_session_path, :method => :delete %> </span>
 <% else %>
